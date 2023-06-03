@@ -8,6 +8,16 @@ Components
 ----------
 
 -   *Keycloack* service.
--   *Service 1* - a sample Java - Spring Boot service consuming resources
-    exposed by *Service 2*.
--   *Service 2* - a sample resource server written in Java with Spring Boot.
+-   *test-oauth2-client* - a sample Java - Spring Boot service
+    consuming resources exposed by the resource server.
+-   *test-outh2-server* - a sample resource server written in
+    Java with Spring Boot.
+
+test-oauth2-client
+------------------
+
+test-oauth2-server
+------------------
+
+Keycloack
+---------
