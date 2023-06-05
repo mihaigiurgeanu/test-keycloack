@@ -24,4 +24,4 @@ COPY --from=build /app/build/libs/test-oauth2-server-0.0.1-SNAPSHOT.jar .
 EXPOSE 8080/tcp
 
 # Specify the command to run the application
-CMD ["java", "-jar", "test-oauth2-client-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "test-oauth2-server-0.0.1-SNAPSHOT.jar"]
