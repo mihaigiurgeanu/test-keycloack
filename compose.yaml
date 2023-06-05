@@ -1,0 +1,32 @@
+services:
+  resource-client:
+    build:
+      context: ./test-oauth2-client
+    ports:
+      - "127.0.0.1:8000:8080/tcp"
+  resource-server:
+    build:
+      context: ./test-oauth2-server
+    expose:
+      - 8080
+    depends_on:
+      - auth-server
+  auth-server:
+    image: quay.io/keycloak/keycloak:21.1.1
+    expose:
+      - 8080
+    ports:
+      - "127.0.0.1:8080:8080/tcp"
+    configs:
+      - source: realm-config
+        target: /opt/keycloak/data/import/realm.json
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    command:
+      - "start-dev"
+      - "--import-realm"
+
+configs:
+  realm-config:
+    file: ./realm-export.json
