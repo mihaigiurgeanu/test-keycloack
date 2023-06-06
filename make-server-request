@@ -1,0 +1,8 @@
+#!/bin/sh
+
+SERVER=http://localhost:8000/testoauth2client/v1
+RESOURCE=/resources/test-resource
+
+ACCESS_TOKER=`./get-toker`
+
+curl -v -H "Authorization: Bearer $ACCESS_TOKEN" $SERVER$RESOURCE

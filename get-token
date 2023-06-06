@@ -1,0 +1,11 @@
+#!/bin/sh
+
+KCHOST=http://localhost:8080
+REALM=mihaitest
+CLIENT_ID=keycloack-oauth2-test
+CLIENT_SECRET=7Bohja7zRXJCMh1vrt6rTBXKliu3OxUR
+
+curl -v \
+  -d "client_id=$CLIENT_ID" -d "client_secret=$CLIENT_SECRET" \
+  -d "grant_type=client_credentials" \
+  "$KCHOST/realms/$REALM/protocol/openid-connect/token" | jq -r '.access_token'
