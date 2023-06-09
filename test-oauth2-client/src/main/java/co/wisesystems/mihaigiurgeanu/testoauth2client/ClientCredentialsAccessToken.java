@@ -24,6 +24,7 @@ public class ClientCredentialsAccessToken implements ServiceClientAccessToken {
 		form.param("client_id", clientId);
 		form.param("client_secret", clientSecret);
 		form.param("grant_type", "client_credentials");
+		form.param("scope", "roles");
 		
 		Client client = ClientBuilder.newClient();
     	String token = client

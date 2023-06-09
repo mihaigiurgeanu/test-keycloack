@@ -317,6 +317,15 @@
           "clientRole": true,
           "containerId": "fec2edd1-4612-41bf-94e9-f60cbb3deb8a",
           "attributes": {}
+        },
+        {
+          "id": "806bc6e8-cf0e-4681-80ab-ac047a432d79",
+          "name": "TEST",
+          "description": "Can access test resources",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "fec2edd1-4612-41bf-94e9-f60cbb3deb8a",
+          "attributes": {}
         }
       ],
       "account-console": [],
@@ -1528,13 +1537,13 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-usermodel-attribute-mapper",
             "saml-user-attribute-mapper",
-            "oidc-full-name-mapper",
-            "saml-role-list-mapper",
-            "oidc-sha256-pairwise-sub-mapper",
-            "oidc-usermodel-property-mapper",
             "saml-user-property-mapper",
+            "saml-role-list-mapper",
+            "oidc-usermodel-attribute-mapper",
+            "oidc-sha256-pairwise-sub-mapper",
+            "oidc-full-name-mapper",
+            "oidc-usermodel-property-mapper",
             "oidc-address-mapper"
           ]
         }
@@ -1567,14 +1576,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
+            "saml-role-list-mapper",
             "oidc-sha256-pairwise-sub-mapper",
-            "oidc-full-name-mapper",
-            "saml-user-attribute-mapper",
+            "saml-user-property-mapper",
             "oidc-address-mapper",
             "oidc-usermodel-property-mapper",
-            "saml-user-property-mapper",
+            "saml-user-attribute-mapper",
             "oidc-usermodel-attribute-mapper",
-            "saml-role-list-mapper"
+            "oidc-full-name-mapper"
           ]
         }
       }
